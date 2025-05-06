@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: sans-serif;
+}
+
+.hero {
+  background: url('jaktemp.png') no-repeat center center/cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-content {
+  z-index: 2;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #ffd700;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+/* Twitter button */
+.social-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #FFDD4A;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  z-index: 10;
+}
+
+.social-btn i {
+  color: #000;
+  font-size: 22px;
+}
+
+.social-btn:hover {
+  transform: scale(1.1);
+}
+
+.tokenomics-wrapper {
+  position: absolute;
+  top: 85%; /* adjust this to move the full button+text lower */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tokenomics-button {
+  position: relative;
+  width: 152px;
+  height: 98px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tokenomics-button:hover {
+  transform: scale(1.05) rotate(-2deg);
+  filter: drop-shadow(0 0 10px rgba(255, 221, 74, 0.4));
+  transition: all 0.2s ease;
+}
+
+
+
+
+.tokenomics-label {
+  position: absolute;
+  top: 44%; /* ← move text slightly up */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #356AA0;
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 17px;
+  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.78);
+  font-weight: 400;
+  pointer-events: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* 👈 Drop shadow */
+}
+
+
+.contract-box {
+  position: absolute;
+  bottom: 170px; /* adjust based on layout */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 999px;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Fredoka One', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+
+
+.contract-box:hover {
+  transform: translateX(-50%) scale(1.02);
+}
+
+.contract-label {
+  background: #356AA0;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+.contract-address {
+  font-size: 14px;
+  color: #000;
+  word-break: break-all;
+}
+
+.copy-icon {
+  font-size: 16px;
+  color: #504c4c;
+}
+

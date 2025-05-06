@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+  function copyCA() {
+    const ca = document.getElementById("ca-text").textContent;
+    navigator.clipboard.writeText(ca).then(() => {
+      alert("Contract address copied to clipboard!");
+    });
+  }
+</script>
+
+<div id="content"></div>
+<script src="main.js"></script>
+
+
+<body>
+  <div class="hero">
+    <div class="hero-content">
+
+      <!-- Contract box hidden until launch -->
+      <div id="contract-box-wrapper" style="display: none;">
+        <div class="contract-box" onclick="copyCA()">
+          <span class="contract-label">CA</span>
+          <span class="contract-address" id="ca-text">0x123456789ABCDEF123456789ABCDEF123456789A</span>
+          <i class="fas fa-clipboard copy-icon"></i>
+        </div>
+      </div>
+
+      <!-- Tokenomics Button Wrapper -->
+      <div class="tokenomics-wrapper">
+        <a href="tokenomics.html" class="tokenomics-button">
+
+
+          <!-- SVG Bubble -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="162" height="108" viewBox="0 0 162 108" fill="none">
+            <g filter="url(#filter0_d_5_3)">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M79.3924 4.48797C89.0716 3.27108 99.4759 -1.0655 108.299 2.18511C117.129 5.43837 116.777 15.622 123.775 20.8394C131.995 26.969 146.738 27.4005 152.353 35.0325C157.845 42.4958 159.031 53.1982 152.839 60.3402C146.113 68.0992 129.314 66.1089 120.103 72.2316C113.011 76.9448 115.513 87.9894 106.887 90.883C98.16 93.8103 88.7946 84.6436 79.3924 85.8873C67.1701 87.504 59.016 100.661 46.848 98.8246C36.0347 97.1925 35.1044 85.0555 28.7323 78.2409C22.7209 71.8119 13.8643 66.9751 10.1786 59.6085C6.30092 51.8582 2.46606 42.6418 7.17864 35.1616C12.054 27.4231 25.5638 25.7091 34.7157 20.6615C41.6326 16.8465 47.0455 11.7102 54.7656 8.91547C62.4744 6.12481 70.9636 5.54767 79.3924 4.48797Z"
+                fill="white" stroke="black" />
+            </g>
+            <defs>
+              <filter id="filter0_d_5_3" x="0.5" y="0.5" width="161" height="107" filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix in="SourceAlpha" type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                <feOffset dy="4" />
+                <feGaussianBlur stdDeviation="2" />
+                <feComposite in2="hardAlpha" operator="out" />
+                <feColorMatrix type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.55 0" />
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_5_3" />
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_5_3" result="shape" />
+              </filter>
+            </defs>
+          </svg>
+          <span class="tokenomics-label">TOKENOMICS</span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Twitter Button -->
+    <a href="https://x.com/WojakOnBNB" class="social-btn" target="_blank" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </div>
+</body>
+</html>
